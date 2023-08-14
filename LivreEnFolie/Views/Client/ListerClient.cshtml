@@ -1,0 +1,42 @@
+﻿@model IEnumerable<LivreEnFolie.Models.Client>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<div class="container">
+   
+    <div class="card mt-4 col-md-6">
+        <div class="card-header">Liste des clients</div>
+        <div class="card-body">
+            <a href="/client/add" class="btn btn-primary mt-3 mb-3">Nouveau client</a>
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (LivreEnFolie.Models.Client cli in Model)
+                    {
+                        <tr>
+                            <td>@cli.id_client</td>
+                            <td>@cli.username </td>
+                            <td> @cli.email</td>
+                            <td>
+                                <a href="/client/update/@cli.id_client" class="btn btn-success" role="button"><i class="fa fa-pencil"></i></a>
+                                <a href="/client/delete/@cli.id_client" class="btn btn-danger" onclick="Confirmer()" role="button"><i class="fa fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+  
+</div>
+<script type="text/javascript" src="~/js/Livre.js"></script>

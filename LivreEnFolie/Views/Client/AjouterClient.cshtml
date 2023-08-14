@@ -1,0 +1,40 @@
+﻿
+<!Doctype.html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="card col-md-6">
+                <div class="card-header">Nouveau Client</div>
+                <div class="card-body">
+                    <form action="/client/add" method="post">
+                        <div asp-validation-summary="All" style="color:red"></div>
+                        <div class="error" style="color:red">@ViewBag.error</div>
+                        <div class="form-group mt-2">
+                            <label class="form-label">Username</label>
+                            <input type="text" name="username" class="form-control" />
+                        </div>
+
+                        <div class="form-group mt-2">
+                            <label class="form-label">Email</label>
+                            <input type="email" name="email" class="form-control" />
+                        </div>
+                        <div class="form-group mt-2">
+                            <label>Password</label>
+                            <input type="password" name="password" class="form-control" />
+                        </div>
+                        <div class="form-group mt-2">
+                            <label class="form-label">Retape Password</label>
+                            <input type="password" name="password2" class="form-control" />
+                        </div>
+                        <div class="form-group mt-2">
+                            <button type="submit" class="btn btn-primary">Ajouter Client</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

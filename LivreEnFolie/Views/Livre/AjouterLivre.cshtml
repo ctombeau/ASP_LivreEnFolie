@@ -1,0 +1,46 @@
+﻿<!Doctype.html>
+<html>
+<head>
+
+</head>
+<body>
+    <div class="container">
+        <div class="card col-md-6">
+            <div class="card-header">Nouveau Client</div>
+            <div class="card-body">
+                <form action="/livre/add" method="post">
+                    <div asp-validation-summary="All" style="color:red"></div>
+                    <div class="form-group mt-2">
+                        <label class="form-label">Titre</label>
+                        <input type="text" name="titre" class="form-control" />
+                    </div>
+
+                    <div class="form-group mt-2">
+                        <label class="form-label">Catégorie</label>
+                        <input type="text" name="categorie" class="form-control" />
+                    </div>
+                    <div class="form-group mt-2">
+                        <label>Prix</label>
+                        <input type="number" name="prix" class="form-control" />
+                    </div>
+                    <div class="form-group mt-2">
+                        <label class="form-label">Quantité</label>
+                        <input type="number" name="quantite" class="form-control" />
+                    </div>
+                    <div class="form-group mt-2">
+                        <label class="form-label">Nom Auteur</label>
+                        <input type="text" name="nom" class="form-control" />
+                    </div>
+                    <div class="form-group mt-2">
+                        <label class="form-label">Prénom Auteur</label>
+                        <input type="text" name="prenom" class="form-control" />
+                    </div>
+                    <div class="form-group mt-2">
+                        <button type="submit" class="btn btn-primary">Ajouter Livre</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

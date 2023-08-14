@@ -1,0 +1,64 @@
+﻿@{
+    Layout=null;
+}
+
+<!Doctype.html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/LivreEnFolie.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Livre.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Livre En Folie</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="card col-md-4" id="card">
+            <div class="card-header">Connexion</div>
+            <div class="card-body">
+                <form action=" " method="post">
+                    <div asp-validation-summary="All" style="color:red"></div>
+                    <div class="form-group mt-3">
+                        <label class="form-label">Username</label>
+                        <input type="text" name="username" class="form-control" required/>
+                    </div>
+
+             
+                    <div class="form-group mt-3">
+                        <label>Password</label>
+                        <input type="password" name="password" class="form-control" required/>
+                    </div>
+                    @if(ViewBag.message != "")
+                    {
+                        <div class="mt-3" style="color:red; font-weight:bold">
+                            @ViewBag.message
+                        </div>
+                    }
+                        
+                
+                    <div class="form-group mt-3">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+   
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+       
+</body>
+</html>
